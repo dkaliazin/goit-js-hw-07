@@ -32,9 +32,14 @@ loginForm.addEventListener('submit', (event) => {
     event.preventDefault();
     const emailValue = loginForm.elements.email.value.trim();
     const passwordValue = loginForm.elements.password.value.trim();
+    
     if (emailValue !== "" && passwordValue !== "") {
-      console.log('Email:', emailValue);
-      console.log('Password:', passwordValue);
+      const dataObj = {
+        email: emailValue,
+        password: passwordValue,
+      };
+      console.log(dataObj);
+      //console.log('Password:', passwordValue);
       loginForm.reset();
     } else {
       alert("All form fields must be filled in");
